@@ -1,10 +1,41 @@
 body {
+  font: "Courier New", Courier, monospace;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    width: 100wh;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(77deg, #15578b, #00d3ff);
+    background-size: 400% 400%;
+    
+    -webkit-animation: GradientThatBody 47s ease infinite;
+    -moz-animation: GradientThatBody 47s ease infinite;
+    -o-animation: GradientThatBody 47s ease infinite;
+    animation: GradientThatBody 47s ease infinite;
+    
+}
+
+@-webkit-keyframes GradientThatBody {
+  0%{background-position:0% 63%}
+  50%{background-position:100% 38%}
+  100%{background-position:0% 63%}
+}
+@-moz-keyframes GradientThatBody {
+  0%{background-position:0% 63%}
+  50%{background-position:100% 38%}
+  100%{background-position:0% 63%}
+}
+@-o-keyframes GradientThatBody {
+  0%{background-position:0% 63%}
+  50%{background-position:100% 38%}
+  100%{background-position:0% 63%}
+}
+@keyframes GradientThatBody { 
+  0%{background-position:0% 63%}
+  50%{background-position:100% 38%}
+  100%{background-position:0% 63%}
 }
 
 code {
