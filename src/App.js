@@ -37,9 +37,7 @@ class App extends Component {
   onSubmit = () => {
     const {input, user} = this.state;
     this.setState({imageURL: input});
-    this.setState({
-      input: ''
-    });
+    
     
     fetch(`http://localhost:4000/imageURL/${user.id}`, {
       method: 'post',
@@ -59,14 +57,17 @@ class App extends Component {
             })
           })
             .then(resp => resp.json())
-            .then(count => {
+            .then(user => {
               this.setState({user: user})
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log(error)) // output error for updating rank count
         }
         this.displayBox(this.calculateBoxRegion(response))
       })
-      .catch(err => console.log(err));// there was an error
+      .catch(err => console.log(err));// output error for inputting picture URL
+    this.setState({
+      input: ''
+    });
     }
     
     onKeySubmit = (event) =>{
